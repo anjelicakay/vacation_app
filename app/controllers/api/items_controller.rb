@@ -8,9 +8,7 @@ class Api::ItemsController < ApplicationController
   def create
     @item = Item.new(
                       name: params[:name],
-                      temperature: params[:temperature],
-                      gender: params[:gender],
-                      essential: params[:essential]
+                      list_id: params[:list_id]
                     )
     if @item.save
       render 'show.json.jbuilder'
@@ -27,9 +25,7 @@ class Api::ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     @item.name = params[:name] || @item.name
-    @item.temperature = params[:temperature] || @item.temperature
-    @item.gender = params[:gender] || @item.gender
-    @item.essential = params[:essential] || @item.essential
+    @item.list_id = params[:list_id] || @item.list_id
 
     if @item.save
       render 'show.json.jbuilder'
