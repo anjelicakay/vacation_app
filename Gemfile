@@ -27,6 +27,8 @@ gem 'seed_dump'
 
 gem 'jwt'
 
+gem 'seed_dump'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
