@@ -8,7 +8,8 @@ class Api::ListsController < ApplicationController
   def create
     @list = List.new(
                       name: params[:name],
-                      user_id: current_user.id
+                      user_id: current_user.id,
+                      date: params[:date]
                     )
     if @list.save
       render 'show.json.jbuilder'
@@ -25,7 +26,7 @@ class Api::ListsController < ApplicationController
   def update
     @list = list.find(params[:id])
     @list.name = params[:name] || @list.name
-    # @list.user_id = params[:user_id] || @user.list_id
+    @list.date = params[:date] || @list.date
 
     if @list.save
       render 'show.json.jbuilder'
