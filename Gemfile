@@ -27,7 +27,7 @@ gem 'seed_dump'
 
 gem 'jwt'
 
-gem 'seed_dump'
+# gem 'jquery-countdown-rails', '~> 2.0', '>= 2.0.2'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
