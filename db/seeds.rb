@@ -4,8 +4,10 @@ User.create!([
 ])
 
 List.create!([
-  {user_id: 1, name: "Antarctica"},
-  {user_id: 1, name: "Ecuador"}
+  {user_id: 1, name: "Antarctica", date: nil},
+  {user_id: 1, name: "Ecuador", date: nil},
+  {user_id: 2, name: "New Jersey", date: "01/13/2020"},
+  {user_id: 2, name: "New York", date: "03/10/1988"}
 ])
 
 Item.create!([
