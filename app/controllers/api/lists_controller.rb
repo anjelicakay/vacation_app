@@ -26,7 +26,8 @@ class Api::ListsController < ApplicationController
   end
 
   def update
-    @list = list.find(params[:id])
+    @list = List.find(params[:id])
+
     @list.name = params[:name] || @list.name
     @list.date = params[:date] || @list.date
 

@@ -4,7 +4,6 @@ Rails.application.routes.draw do
     post "/users" => "users#create"
     post "/sessions" => "sessions#create"
 
-
     get "/items" => "items#index"
     post "/items" => "items#create"
     get "/items/:id" => "items#show"
